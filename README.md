@@ -6,6 +6,7 @@ Faculdade de Tecnologia de Sorocaba.
 Four disciplines, three languages, kept as a record of the path rather than as
 finished products.
 
+[![ci](https://github.com/NataliaMendes689/Faculdade/actions/workflows/ci.yml/badge.svg)](https://github.com/NataliaMendes689/Faculdade/actions/workflows/ci.yml)
 ![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
 ![C#](https://img.shields.io/badge/C%23-512BD4?style=flat-square)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
@@ -73,3 +74,13 @@ code was readable on GitHub — no syntax highlighting, no diffs, no search. The
 archives have been unpacked and the source committed directly; build output
 (`bin/`, `obj/`, `.vs/`) is excluded by `.gitignore` instead of being carried around
 inside a compressed file.
+
+## Continuous integration
+
+Three of the four disciplines have a `revisitado/` folder holding a modern take on
+one of their exercises, and those are the only parts of the repository that build. CI covers all
+three on every push: the C leaderboard under gcc with `-Wall -Wextra -Wpedantic
+-Wshadow -Wconversion` and again under valgrind, the C# payroll on .NET 10 with
+warnings as errors, and the Java enrolment domain on JDK 21 with `-Xlint:all
+-Werror`. A fourth job refuses archives and build output, so the unpacking done here
+cannot be undone by a later commit.
