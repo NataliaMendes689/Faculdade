@@ -1,0 +1,35 @@
+# Java / NetBeans
+*.class
+*.jar
+build/
+dist/
+nbbuild/
+nbdist/
+nbproject/private/
+.nb-gradle/
+
+# C# / Visual Studio
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.cache
+
+# C
+*.o
+*.exe
+*.out
+a.out
+
+# Archives — source belongs in the repository, not inside a .rar
+*.rar
+*.zip
+*.7z
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
